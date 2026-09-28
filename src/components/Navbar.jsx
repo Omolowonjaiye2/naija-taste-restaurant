@@ -1,0 +1,2 @@
+import {Link, NavLink} from 'react-router-dom'; import {useCart} from '../context/CartContext';
+export default function Navbar(){const {count}=useCart(); return <header className="nav"><Link to="/" className="brand"><span>NT</span> NAIJA TASTE</Link><nav><NavLink to="/">Home</NavLink><NavLink to="/menu">Menu</NavLink><NavLink to="/about">About</NavLink><NavLink to="/contact">Contact</NavLink></nav><Link className="cart-link" to="/cart">Cart <b>{count}</b></Link></header>}
